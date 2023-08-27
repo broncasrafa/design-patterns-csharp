@@ -8,8 +8,8 @@ public class TransacaoBancaria
     public string NomeCompleto { get; set; }
     public string Documento { get; set; }
     public decimal ValorTransacao { get; set; }
-    public TipoTransacaoBancaria TipoTransacaoBancaria { get; set; }    
-    public InstituicaoFinanceira InstituicaoFinanceira { get; set; }
+    public TipoTransacaoBancaria TipoTransacao { get; set; }    
+    public DadosContaBancaria DadosConta { get; set; }
     public TipoContaBancaria TipoConta { get; set; }
 
     public static TransacaoBancaria TransacaoBancaria_1()
@@ -19,9 +19,9 @@ public class TransacaoBancaria
             NomeCompleto = "Marinara da Silva",
             Documento = "87947428557",
             ValorTransacao = 5000.00M,
-            TipoTransacaoBancaria = TipoTransacaoBancaria.Deposito,
+            TipoTransacao = TipoTransacaoBancaria.Deposito,
             TipoConta = TipoContaBancaria.ContaCorrente,
-            InstituicaoFinanceira = new()
+            DadosConta = new()
             {
                 Agencia = "0234", Conta = "018293", Digito = "0"
             }
@@ -34,9 +34,9 @@ public class TransacaoBancaria
             NomeCompleto = "Yogi Cathh",
             Documento = "36206128890",
             ValorTransacao = 150.00M,
-            TipoTransacaoBancaria = TipoTransacaoBancaria.Transferencia,
+            TipoTransacao = TipoTransacaoBancaria.Transferencia,
             TipoConta = TipoContaBancaria.ContaCorrente,
-            InstituicaoFinanceira = new()
+            DadosConta = new()
             {
                 Agencia = "0200",
                 Conta = "075693",
@@ -51,9 +51,9 @@ public class TransacaoBancaria
             NomeCompleto = "Cami Brito",
             Documento = "86984623758",
             ValorTransacao = 5000.00M,
-            TipoTransacaoBancaria = TipoTransacaoBancaria.Saque,
+            TipoTransacao = TipoTransacaoBancaria.Saque,
             TipoConta = TipoContaBancaria.ContaCorrente,
-            InstituicaoFinanceira = new()
+            DadosConta = new()
             {
                 Agencia = "0069",
                 Conta = "0696969",
@@ -63,7 +63,7 @@ public class TransacaoBancaria
     }
 }
 
-public class InstituicaoFinanceira
+public class DadosContaBancaria
 {
     public string Conta { get; set; }
     public string Digito { get; set; }

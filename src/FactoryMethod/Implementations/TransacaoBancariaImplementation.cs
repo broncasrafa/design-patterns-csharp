@@ -11,7 +11,7 @@ public class FactoryMethodClass3
     {
         TransacaoBancaria transacaoBancaria = TransacaoBancaria.TransacaoBancaria_1();
         TransacaoBancariaFactory factory = new TransacaoBancariaFactory();
-        TransacaoBancariaService transacaoService = factory.CreateBankingTransaction(transacaoBancaria.TipoTransacaoBancaria);
+        TransacaoBancariaService transacaoService = factory.CreateBankingTransaction(transacaoBancaria.TipoTransacao);
         transacaoService.Executar(transacaoBancaria);
     }
 }
